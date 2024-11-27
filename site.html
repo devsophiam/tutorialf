@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <link rel="stylesheet" href="site.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Tutorial de Loops em Programação</h1>
+        <p>Aprenda sobre as estruturas de repetição <strong>for</strong>, <strong>while</strong>, e <strong>do-while</strong>.</p>
+    </header>
+    <main>
+        <section id="for-loop">
+            <h2>Estrutura <code>for</code></h2>
+            <p>O loop <code>for</code> é usado quando o número de iterações é conhecido. Ele contém três partes: inicialização, condição e incremento.</p>
+            <div class="example">
+                <h3>Exemplo 1: Código</h3>
+                <pre><code>
+for (int i = 1; i <= 5; i++) {
+    System.out.println(i);
+}
+                </code></pre>
+            
+            </div>
+                <div class="example">
+                    <h3>Exemplo 2: Tabuada</h3>
+                    <pre><code>
+for (let i = 1; i <= 10; i++) {
+console.log(${numero} x ${i} = ${numero * i});
+}
+                    </code></pre>
+                </div>
+                <div class="exemple">
+                    <h3>Exemplo 3: Números Pares</h3>
+                    <pre><code>
+                        let numero = 3;
+            
+for (let i = 2; i <= 10; i += 2) {
+let resultado = numero * i;
+console.log(`${numero} x ${i} = ${resultado}`);
+}
+                    </code></pre>
+                </div>
+                <div class="example">
+                    <h3>Exemplo 4: Fatorial</h3>
+                    <pre><code>
+let numero = 5;
+let fatorial = 1;
+            
+for (let i = 1; i <= numero; i++) {
+fatorial *= i;
+}
+            
+console.log(`O fatorial de ${numero} é: ${fatorial}`);
+                    </code></pre>
+                </div>
+
+            <div class="exemple">
+                <h3>Exemplo 5: Contagem Regressiva </h3>
+                <pre><code>
+let numeroInicial = 10;
+
+for (let i = numeroInicial; i >= 1; i--) {
+console.log(i);
+}
+console.log('Contagem regressiva concluída!');
+ </pre></code>
+</div>    
+           <div class="exemple">
+            <h3>Exemplo 6: Multiplicação em Intervalo</h3>
+            <pre><code>
+let numero = 3;
+            
+for (let i = 1; i <= 10; i++) {
+let resultado = numero * i;
+console.log(`${numero} x ${i} = ${resultado}`);
+}
+            </code></pre>
+           </div>
+           
+     
+<section id="for-loop">
+                <h2>Estrutura <code>for</code></h2>
+                <p>Explore cinco exemplos interativos.</p>
+                <div id="for-examples">
+                    <h3>Exemplo 1: Tabuada</h3>
+                    <label for="for-tabuada">Digite um número:</label>
+                    <input type="number" id="for-tabuada">
+                    <button onclick="runForTabuada()">Gerar Tabuada</button>
+                    <pre id="forTabuadaOutput"></pre>
+    
+                    <h3>Exemplo 2: Números Pares</h3>
+                    <label for="for-pares-end">Até que número?</label>
+                    <input type="number" id="for-pares-end">
+                    <button onclick="runForPares()">Gerar Números Pares</button>
+                    <pre id="forParesOutput"></pre>
+    
+                    <h3>Exemplo 3: Fatorial</h3>
+                    <label for="for-fatorial">Digite um número:</label>
+                    <input type="number" id="for-fatorial">
+                    <button onclick="runForFatorial()">Calcular Fatorial</button>
+                    <pre id="forFatorialOutput"></pre>
+    
+                    <h3>Exemplo 4: Contagem Regressiva</h3>
+                    <label for="for-regressiva">Começar de:</label>
+                    <input type="number" id="for-regressiva">
+                    <button onclick="runForRegressiva()">Iniciar</button>
+                    <pre id="forRegressivaOutput"></pre>
+    
+                    <h3>Exemplo 5: Multiplicação em Intervalo</h3>
+                    <label for="for-mult-start">Início:</label>
+                    <input type="number" id="for-mult-start">
+                    <label for="for-mult-end">Fim:</label>
+                    <input type="number" id="for-mult-end">
+                    <label for="for-mult-factor">Multiplicador:</label>
+                    <input type="number" id="for-mult-factor">
+                    <button onclick="runForMultiplicacao()">Gerar</button>
+                    <pre id="forMultiplicacaoOutput"></pre>
+                </div>
+            </section>
+
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="while-loop">
+            <h2>Estrutura <code>while</code></h2>
+            <p>O loop <code>while</code> é usado quando o número de iterações depende de uma condição que pode mudar dinamicamente.</p>
+            <div class="example">
+                <h3>Exemplo 1: Contagem Crescente</h3>
+                <pre><code>
+let i = 1;
+            
+while (i <= 10) {
+console.log(i);
+i++;  // Aumenta o valor de "i" em 1 a cada iteração
+}
+</pre></code>
+</div>
+            <div class="example">
+                <h3>Exemplo 2: Soma Acumulada</h3>
+                <pre><code>
+let soma = 0;
+let i = 1;
+                    
+while (i <= 5) {
+soma += i;  // Soma o valor de i a cada iteração
+i++;        // Aumenta o valor de i em 1 a cada iteração
+}
+                </code></pre>
+            </div>
+            <div class="example">
+                <h3>Exemplo 3:Sequência de Fibonacci </h3>
+                <pre><code>
+let n1 = 0, n2 = 1, nextTerm;
+let count = 1;
+let resultado = `${n1} ${n2} `;
+
+while (count <= 8) {
+nextTerm = n1 + n2;  // Calcula o próximo número da sequência
+resultado += nextTerm + " ";  // Adiciona o próximo número à sequência
+n1 = n2;  // Atualiza n1 para o valor de n2
+n2 = nextTerm;  // Atualiza n2 para o próximo termo calculado
+count++;  // Aumenta o contador
+}
+                </code></pre>
+            </div>
+            <div class="example">
+                <h3>Exemplo 4: Números Ímpares</h3>
+                <pre><code>
+let max = 20; // Número máximo até onde queremos gerar os ímpares
+let i = 1; // O primeiro número ímpar
+                    
+while (i <= max) {
+if (i % 2 !== 0) { // Verifica se o número é ímpar
+console.log(i);
+}
+i++; // Incrementa para o próximo número
+}
+                </code></pre>
+            </div>
+            <div class="example">
+                <h3>Exemplo 5: Divisores</h3>
+                <pre><code>
+let numero = 36; // Número para o qual queremos encontrar os divisores
+let i = 1; // Começamos com 1
+                    
+while (i <= numero) {
+if (numero % i === 0) { // Verifica se 'i' é um divisor de 'numero'
+console.log(i); // Exibe o divisor
+}
+i++; // Incrementa para o próximo número
+}
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="while-loop">
+            <h2>Estrutura <code>while</code></h2>
+            <p>Explore cinco exemplos interativos.</p>
+            <div id="while-examples">
+                <h3>Exemplo 1: Contagem Crescente</h3>
+                <label for="while-crescente-end">Até que número?</label>
+                <input type="number" id="while-crescente-end">
+                <button onclick="runWhileCrescente()">Iniciar</button>
+                <pre id="whileCrescenteOutput"></pre>
+
+                <h3>Exemplo 2: Soma Acumulada</h3>
+                <label for="while-soma-end">Somar até:</label>
+                <input type="number" id="while-soma-end">
+                <button onclick="runWhileSoma()">Calcular</button>
+                <pre id="whileSomaOutput"></pre>
+
+                <h3>Exemplo 3: Sequência de Fibonacci</h3>
+                <label for="while-fibo-term">Quantos termos?</label>
+                <input type="number" id="while-fibo-term">
+                <button onclick="runWhileFibonacci()">Gerar</button>
+                <pre id="whileFiboOutput"></pre>
+
+                <h3>Exemplo 4: Números Ímpares</h3>
+                <label for="while-odd-end">Até que número?</label>
+                <input type="number" id="while-odd-end">
+                <button onclick="runWhileOdd()">Gerar</button>
+                <pre id="whileOddOutput"></pre>
+
+                <h3>Exemplo 5: Divisores</h3>
+                <label for="while-div-num">Digite um número:</label>
+                <input type="number" id="while-div-num">
+                <button onclick="runWhileDivisores()">Encontrar</button>
+                <pre id="whileDivisoresOutput"></pre>
+            </div>
+        </section>
+
+        <section id="do-while-loop">
+            <h2>Estrutura <code>do-while</code></h2>
+            <p>O loop <code>do-while</code> executa o bloco pelo menos uma vez antes de verificar a condição.</p>
+            <div class="example">
+                <h3>Exemplo 1: Soma de Números</h3>
+                <pre><code>
+let soma = 0;
+let i = 1;
+do {
+soma += i;
+i++;
+} while (i <= 5);
+console.log(soma);  // Resultado: 15
+</code></pre>
+            </div>
+
+            <div class="example">
+                <h3>Exemplo 2: Soma dos Dígitos de um Número</h3>
+                <pre><code>
+let numero = 1234;
+let soma = 0;
+do {
+soma += numero % 10;
+numero = Math.floor(numero / 10);
+} while (numero > 0);
+console.log(soma);  // Resultado: 10 (1 + 2 + 3 + 4)
+                </code></pre>
+            </div>
+
+            <div class="example">
+                <h3>Exemplo 3: Quadrados dos Números de 1 a 5</h3>
+                <pre><code>
+let i = 1;
+do {
+console.log(i * i);  // Exibe o quadrado de i
+i++;
+} while (i <= 5);
+                </code></pre>
+            </div>
+
+            <div class="example">
+                <h3>Exemplo 4: Multiplicação Contínua</h3>
+                <pre><code>
+let multiplicacao = 1;
+let i = 1;
+do {
+multiplicacao *= i;
+i++;
+} while (i <= 5);
+console.log(multiplicacao);  // Resultado: 120 (1 * 2 * 3 * 4 * 5)
+                </code></pre>
+            </div>
+
+            <div class="example">
+                <h3>Exemplo 5: Soma de Números Pares de 1 a 10</h3>
+                <pre><code>
+let somaPares = 0;
+let i = 2;
+do {
+somaPares += i;
+i += 2;  // Incrementa 2 para pegar o próximo número par
+} while (i <= 10);
+console.log(somaPares);  // Resultado: 30 (2 + 4 + 6 + 8 + 10)
+                </code></pre>
+            </div>
+            
+        </section>
+        <section id="do-while-loop">
+            <h2>Estrutura <code>do-while</code></h2>
+            <p>Explore cinco exemplos interativos.</p>
+            <div id="do-while-examples">
+                <h3>Exemplo 1: Repetir Nome</h3>
+                <label for="do-name">Digite um nome:</label>
+                <input type="text" id="do-name">
+                <label for="do-repeats">Quantas vezes?</label>
+                <input type="number" id="do-repeats">
+                <button onclick="runDoWhileName()">Executar</button>
+                <pre id="doNameOutput"></pre>
+
+                <h3>Exemplo 2: Soma de Dígitos</h3>
+                <label for="do-soma-digito">Digite um número:</label>
+                <input type="number" id="do-soma-digito">
+                <button onclick="runDoWhileSomaDigitos()">Calcular</button>
+                <pre id="doSomaDigitosOutput"></pre>
+
+                <h3>Exemplo 3: Números Quadrados</h3>
+                <label for="do-squares-end">Até que número?</label>
+                <input type="number" id="do-squares-end">
+                <button onclick="runDoWhileSquares()">Gerar</button>
+                <pre id="doSquaresOutput"></pre>
+
+                <h3>Exemplo 4: Multiplicação Contínua</h3>
+                <label for="do-mult-num">Digite um número:</label>
+                <input type="number" id="do-mult-num">
+                <label for="do-mult-count">Quantas vezes?</label>
+                <input type="number" id="do-mult-count">
+                <button onclick="runDoWhileMultiplicacao()">Calcular</button>
+                <pre id="doMultiplicacaoOutput"></pre>
+
+                <h3>Exemplo 5: Soma de Pares</h3>
+                <label for="do-sum-pairs-end">Até que número?</label>
+                <input type="number" id="do-sum-pairs-end">
+                <button onclick="runDoWhileSomaPares()">Somar</button>
+                <pre id="doSomaParesOutput"></pre>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 For, while, do while</p>
+    </footer>
+</body>
+</html>
